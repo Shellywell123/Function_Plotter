@@ -3,6 +3,8 @@ from mpl_toolkits.mplot3d import Axes3D
 from numpy import *
 
 def run():
+    """
+    """
     func_string = input('input your function:\n')
 
     #lims preset fo now
@@ -12,7 +14,6 @@ def run():
     xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
     zlist = linspace(zfunc_lims[0],zfunc_lims[1],1000)
     ylist = []
-
 
     for n in range (0,len(xlist)):
         x = xlist[n]
@@ -24,9 +25,6 @@ def run():
         except:
             print('invalid input retry:')
             run()
-        
-
-
 
     fig = plt.figure('Function_Plotter')
     ax = fig.add_subplot(111, projection='3d')
