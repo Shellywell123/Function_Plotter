@@ -5,7 +5,7 @@ def run():
     func_string = input('input your function:\n')
 
     #lims preset fo now
-    xfunc_lims = (0,100)
+    xfunc_lims = (-100,100)
 
     xlist = linspace(xfunc_lims[0],xfunc_lims[1],xfunc_lims[1]+1)
     ylist = []
@@ -20,8 +20,10 @@ def run():
             print('invalid input retry:')
             run()
 
-    plt.figure()
+    plt.figure('Function_Plotter')
     plt.title('y = '+func_string)
+    plt.xlabel('x')
+    plt.ylabel('y')
     plt.plot(xlist,ylist)
     plt.grid()
     plt.show()
