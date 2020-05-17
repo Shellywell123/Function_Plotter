@@ -34,7 +34,10 @@ def run():
     ax.set_xlabel('$x$')
     ax.set_ylabel('$y$')
     ax.set_zlabel('$z$')
-    ax.plot(xlist,ylist,zlist)
+    if 'z' in func_string:
+        ax.plot(xlist,ylist,zlist)
+    else:
+        ax.plot(xlist,ylist)
     plt.show()
 
 run()
