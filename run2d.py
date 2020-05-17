@@ -7,7 +7,7 @@ def run():
     #lims preset fo now
     xfunc_lims = (-100,100)
 
-    xlist = linspace(xfunc_lims[0],xfunc_lims[1],xfunc_lims[1]+1)
+    xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
     ylist = []
 
     for n in range (0,len(xlist)):

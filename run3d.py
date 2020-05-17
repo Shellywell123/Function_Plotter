@@ -9,8 +9,8 @@ def run():
     xfunc_lims = (-100,100)
     zfunc_lims = (-100,100)
 
-    xlist = linspace(xfunc_lims[0],xfunc_lims[1],xfunc_lims[1]+1)
-    zlist = linspace(zfunc_lims[0],zfunc_lims[1],zfunc_lims[1]+1)
+    xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
+    zlist = linspace(zfunc_lims[0],zfunc_lims[1],1000)
     ylist = []
 
 
