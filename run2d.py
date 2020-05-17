@@ -21,9 +21,9 @@ def run():
             run()
 
     plt.figure('Function_Plotter')
-    plt.title('y = '+func_string)
-    plt.xlabel('x')
-    plt.ylabel('y')
+    plt.title('$y = '+func_string+'$')
+    plt.xlabel('$x$')
+    plt.ylabel('$y$')
     plt.plot(xlist,ylist)
     plt.grid()
     plt.show()
