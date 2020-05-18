@@ -42,26 +42,27 @@ def runOld():
 def run():
     """
     """
-    func_string = input('input your function:\n')
+    func_string_raw = input('input your function:\n')
 
     #lims preset fo now
     xfunc_lims = (-100,100)
     yfunc_lims = (-100,100)
     zfunc_lims = (-100,100)
 
-    if '=' not in func_string:
+    if '=' not in func_string_raw:
         print( 'function requires "=", e.g "y=mx+c"')
         run()
 
-    if ('y =' in func_string) or ('y=' in func_string):
+    if ('y =' in func_string_raw) or ('y=' in func_string_raw):
             fvar = 'y'
-            func_string = func_string.split('=')[1]
+            func_string = func_string_raw.split('=')[1]
             xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
             zlist = linspace(zfunc_lims[0],zfunc_lims[1],1000)
             ylist = []
 
             for n in range (0,len(xlist)):
                 x = xlist[n]
+                z = zlist[n]
 
                 try:
                     y = eval(func_string)
@@ -70,46 +71,58 @@ def run():
                     print('invalid input retry:')
                     run()
 
-    if ('x =' in func_string) or ('x=' in func_string):
+    if ('x =' in func_string_raw) or ('x=' in func_string_raw):
         fvar = 'x'
-        func_string = func_string.split('=')[1]
+        func_string = func_string_raw.split('=')[1]
         ylist = linspace(yfunc_lims[0],yfunc_lims[1],1000)
         zlist = linspace(zfunc_lims[0],zfunc_lims[1],1000)
         xlist = []
 
         for n in range (0,len(ylist)):
             y = ylist[n]
+            z = zlist[n]
 
             try:
                 x = eval(func_string)
-                xlist.append(y)
+                xlist.append(x)
             except:
                 print('invalid input retry:')
                 run()
 
-    if ('z =' in func_string) or ('z=' in func_string):
+    if ('z =' in func_string_raw) or ('z=' in func_string_raw):
         fvar = 'z'
-        func_string = func_string.split('=')[1]
+        func_string = func_string_raw.split('=')[1]
         ylist = linspace(yfunc_lims[0],yfunc_lims[1],1000)
         xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
         zlist = []
 
         for n in range (0,len(ylist)):
-            z = zlist[n]
+            x = xlist[n]
+            y = ylist[n]
 
             try:
                 z = eval(func_string)
-                zlist.append(y)
+                zlist.append(z)
             except:
                 print('invalid input retry:')
                 run()
 
     fig = plt.figure('Function_Plotter')
     ax = fig.add_subplot(111, projection='3d')
-    plt.title('$'+fvar+' = '+func_string+'$')
+    plt.title('$'+func_string_raw+'$')
     ax.set_xlabel('$x$')
     ax.set_ylabel('$y$')
     ax.set_zlabel('$z$')
+
+    if 'x' not in func_string_raw:
+            xlist = list(zeros(len(xlist)))
+
+    if 'y' not in func_string_raw:
+            ylist = list(zeros(len(ylist)))
+
+    if 'z' not in func_string_raw:
+            zlist = list(zeros(len(zlist)))
+
     ax.plot(xlist,ylist,zlist)
     plt.show()
 

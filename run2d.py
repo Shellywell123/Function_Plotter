@@ -4,20 +4,21 @@ from numpy import *
 def run():
     """
     """
+    
     #deafult form y=..
     fvar = 'y'
-    func_string = input('input your function:\n')
+    func_string_raw = input('input your function:\n')
 
     #lims preset for now
     xfunc_lims = (-100,100)
 
-    if '=' not in func_string:
+    if '=' not in func_string_raw:
         print( 'function requires "=", e.g "y=mx+c"')
         run()
 
-    if ('y =' in func_string) or ('y=' in func_string):
+    if ('y =' in func_string_raw) or ('y=' in func_string_raw):
         fvar = 'y'
-        func_string = func_string.split('=')[1]
+        func_string = func_string_raw.split('=')[1]
         xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
         ylist = []
 
@@ -31,9 +32,9 @@ def run():
                 print('invalid input retry:')
                 run()
 
-    if ('x =' in func_string) or ('x=' in func_string):
+    if ('x =' in func_string_raw) or ('x=' in func_string_raw):
         fvar = 'x'
-        func_string = func_string.split('=')[1]
+        func_string = func_string_raw.split('=')[1]
         ylist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
         xlist = []
 
@@ -48,7 +49,7 @@ def run():
                 run()
 
     plt.figure('Function_Plotter')
-    plt.title('$'+fvar+' = '+func_string+'$')
+    plt.title('$'+func_string_raw+'$')
     plt.xlabel('$x$')
     plt.ylabel('$y$')
     plt.plot(xlist,ylist)
