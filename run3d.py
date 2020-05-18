@@ -12,6 +12,9 @@ def run():
     yfunc_lims = (-100,100)
     zfunc_lims = (-100,100)
 
+    if func_string_raw == 'exit':
+        return 0
+
     if '=' not in func_string_raw:
         print( 'function requires "=", e.g "y=mx+c"')
         run()

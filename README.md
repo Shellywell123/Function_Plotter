@@ -13,3 +13,6 @@ Uses matplotlib and numpy libraries.
     - y = f(x,z), y = f(x), y = f(z)
     - x = f(y,z), x = f(y), x = f(z)
     - z = f(x,y), z = f(x), z = f(y)
+
+## Fixes to be made
+- some features break after one false input

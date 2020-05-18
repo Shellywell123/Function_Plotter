@@ -12,6 +12,13 @@ def run():
     #lims preset for now
     xfunc_lims = (-100,100)
 
+    if func_string_raw == 'exit':
+        return 0
+
+    if 'z' in func_string_raw:
+        print ('2D is only in x & y, retry:')
+        run()
+
     if '=' not in func_string_raw:
         print( 'function requires "=", e.g "y=mx+c"')
         run()
