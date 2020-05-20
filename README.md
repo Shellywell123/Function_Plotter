@@ -9,10 +9,11 @@ Uses matplotlib and numpy libraries.
 ## Features
  - supports 2D and 3D functions
  - supports trigonometry functions
- - supports multiple input forms:\
+ - supports multiple input forms:
     - y = f(x,z), y = f(x), y = f(z)
     - x = f(y,z), x = f(y), x = f(z)
     - z = f(x,y), z = f(x), z = f(y)
+ - user inputted lims (2d only supported thus far)
 
 ## Fixes to be made
 - some features break after one false input
