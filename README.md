@@ -17,3 +17,8 @@ Uses matplotlib and numpy libraries.
 
 ## Fixes to be made
 - some features break after one false input
+
+## Examples
+
+- 'z = x*sin(y)**2'
+![screenshot](Images/screenshot.png)
