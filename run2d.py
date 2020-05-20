@@ -1,6 +1,22 @@
 import matplotlib.pyplot as plt
 from numpy import *
 
+def help_info():
+    string = """
+Funciton_Plotter 2D
+-------------------
+
+input function in forms,
+y = f(x)
+x = f(y)
+
+Other Commands
+exit: quits program
+help: opens this page
+"""
+
+    print (string)
+
 def run():
     """
     """
@@ -11,6 +27,9 @@ def run():
 
     #lims preset for now
     xfunc_lims = (-100,100)
+
+    if func_string_raw == 'help':
+        help_info()
 
     if func_string_raw == 'exit':
         return 0
@@ -36,7 +55,7 @@ def run():
                 y = eval(func_string)
                 ylist.append(y)
             except:
-                print('invalid input retry:')
+                print('invalid input, type "help" or retry:')
                 run()
 
     if ('x =' in func_string_raw) or ('x=' in func_string_raw):
@@ -52,7 +71,7 @@ def run():
                 x = eval(func_string)
                 xlist.append(y)
             except:
-                print('invalid input retry:')
+                print('invalid input, type "help" or retry:')
                 run()
 
     plt.figure('Function_Plotter')

@@ -2,6 +2,25 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from numpy import *
 
+from numpy import *
+
+def help_info():
+    string = """
+Funciton_Plotter 3D
+-------------------
+
+input function in forms,
+y = f(x,z) or f(x) or f(z)
+x = f(y,z) or f(y) or f(z)
+z = f(x,y) or f(x) or f(y)
+
+Other Commands
+exit: quits program
+help: opens this page
+"""
+
+    print (string)
+
 def run():
     """
     """
@@ -14,6 +33,9 @@ def run():
 
     if func_string_raw == 'exit':
         return 0
+
+    if func_string_raw == 'help':
+        help_info()
 
     if '=' not in func_string_raw:
         print( 'function requires "=", e.g "y=mx+c"')
@@ -34,7 +56,7 @@ def run():
                     y = eval(func_string)
                     ylist.append(y)
                 except:
-                    print('invalid input retry:')
+                    print('invalid input, type "help" or retry:')
                     run()
 
     if ('x =' in func_string_raw) or ('x=' in func_string_raw):
@@ -52,7 +74,7 @@ def run():
                 x = eval(func_string)
                 xlist.append(x)
             except:
-                print('invalid input retry:')
+                print('invalid input, type "help" or retry:')
                 run()
 
     if ('z =' in func_string_raw) or ('z=' in func_string_raw):
@@ -70,7 +92,7 @@ def run():
                 z = eval(func_string)
                 zlist.append(z)
             except:
-                print('invalid input retry:')
+                print('invalid input, type "help" or retry:')
                 run()
 
     fig = plt.figure('Function_Plotter')
