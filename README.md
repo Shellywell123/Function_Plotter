@@ -57,3 +57,14 @@ z = x*sin(y)**2
 output:
 
 ![screenshot](Images/screenshot.png)
+
+In terminal/cmd prompt:
+```bash
+python3 run3d.py
+```
+```bash
+batman
+```
+output:
+
+![screenshot](Images/batman.png)
