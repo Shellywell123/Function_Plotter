@@ -38,6 +38,10 @@ python3 run3d.py
     - x = f(y,z), x = f(y), x = f(z)
     - z = f(x,y), z = f(x), z = f(y)
  - User inputted lims (2d only supported thus far)
+ - batman function 
+ ```bash
+batman
+```
 
 ## Fixes to be made
 - Some features break after one false input

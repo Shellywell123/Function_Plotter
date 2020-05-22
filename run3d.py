@@ -29,6 +29,9 @@ def run():
     yfunc_lims = (-100,100)
     zfunc_lims = (-100,100)
 
+    if func_string_raw =='batman':
+        import batman 
+        
     if func_string_raw == 'exit':
         exit(0)
         

@@ -31,7 +31,12 @@ def MPL_Prefs(fig,ax,title_obj,grid):
         ax.set_ylabel('$y$')
         ax.set_zlabel('$z$')
 
-        ax.grid(color='r', linestyle='-', linewidth=2)
+        ax.zaxis._axinfo["grid"]['color'] = "green" 
+        ax.zaxis._axinfo["grid"]["linewidth"] = 0.5
+        ax.yaxis._axinfo["grid"]['color'] = "green" 
+        ax.yaxis._axinfo["grid"]["linewidth"] = 0.5
+        ax.xaxis._axinfo["grid"]['color'] = "green"
+        ax.xaxis._axinfo["grid"]["linewidth"] = 0.5
 
     if "3D" not in str(type(ax)):
         # if 2d do this stuff
@@ -45,7 +50,7 @@ def MPL_Prefs(fig,ax,title_obj,grid):
     fig.set_facecolor('black')
     ax.set_facecolor('black')
     plt.setp(title_obj, color='white')
-    plt.rcParams['grid.color'] = "green"
+   # plt.rcParams['grid.color'] = "green"
 
     ax.tick_params(axis='x', colors='lime')
     ax.tick_params(axis='y', colors='lime') 
