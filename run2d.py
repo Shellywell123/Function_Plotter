@@ -70,8 +70,7 @@ def run():
         help_info()
 
     if func_string_raw == 'exit':
-        return 0
-        exit()
+        exit(0)
 
     if 'z' in func_string_raw:
         print ('2D is only in x & y, retry:')

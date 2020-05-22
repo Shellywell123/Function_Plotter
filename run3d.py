@@ -32,8 +32,8 @@ def run():
     zfunc_lims = (-100,100)
 
     if func_string_raw == 'exit':
-        return 0
-
+        exit(0)
+        
     if func_string_raw == 'help':
         help_info()
 
