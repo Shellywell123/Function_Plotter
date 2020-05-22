@@ -43,6 +43,12 @@ python3 run3d.py
 - some features break after one false input
 
 ## Examples
-
-- 'z = x*sin(y)**2'
+In terminal/cmd prompt:
+```bash
+python3 run3d.py
+```
+```bash
+z = x*sin(y)**2
+```
+output:
 ![screenshot](Images/screenshot.png)
