@@ -2,9 +2,33 @@
 Will plot functions from direct input, written in Python3 for linux terminal
 Uses matplotlib and numpy libraries.
 
-## Usage
- - for 2d functions execute run2d.py
- - for 3d functions execute run3d.py
+## Instructions:
+
+### How to setup:
+In terminal/cmd prompt, clone the repository into you desired location:
+```bash
+git clone https://github.com/Shellywell123/Function_Plotter.git
+```
+
+### How to update:
+Navigate to program directory:
+```bash
+cd Function_Plotter/
+```
+In terminal/cmd prompt, pull the latest version:
+```bash
+git pull
+```
+
+### How to run:
+For 2D functions, in terminal/cmd prompt, execute 'run2d.py' with python 3:
+```bash
+python3 run2d.py
+```
+For 3D functions, in terminal/cmd prompt, execute 'run3d.py' with python 3:
+```bash
+python3 run3d.py
+```
 
 ## Features
  - supports 2D and 3D functions
