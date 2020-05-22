@@ -1,5 +1,5 @@
 # Function Plotter
-Will plot functions from direct input, written in Python3 for linux terminal
+Program for plotting 2D & 3D functions from direct input, written in Python3 for linux terminal
 Uses matplotlib and numpy libraries.
 
 ## Instructions:
@@ -31,16 +31,16 @@ python3 run3d.py
 ```
 
 ## Features
- - supports 2D and 3D functions
- - supports trigonometry functions
- - supports multiple input forms:
+ - Supports 2D and 3D functions
+ - Supports trigonometry functions
+ - Supports multiple input forms:
     - y = f(x,z), y = f(x), y = f(z)
     - x = f(y,z), x = f(y), x = f(z)
     - z = f(x,y), z = f(x), z = f(y)
- - user inputted lims (2d only supported thus far)
+ - User inputted lims (2d only supported thus far)
 
 ## Fixes to be made
-- some features break after one false input
+- Some features break after one false input
 
 ## Examples
 In terminal/cmd prompt:
@@ -51,4 +51,5 @@ python3 run3d.py
 z = x*sin(y)**2
 ```
 output:
+
 ![screenshot](Images/screenshot.png)
