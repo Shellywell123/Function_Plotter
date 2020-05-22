@@ -7,7 +7,7 @@ def MPL_Prefs(fig,ax,title_obj,grid):
     matplotlib prefences for 2d and 3d guis
     """  
     
-    try:
+    if "3D" in str(type(ax)):
         #if 3d do this stuff also (zaxis operations)
         ax.grid(color='green',linewdith=1, alpha=0.5)
 
@@ -33,7 +33,7 @@ def MPL_Prefs(fig,ax,title_obj,grid):
 
         ax.grid(color='r', linestyle='-', linewidth=2)
 
-    except:
+    if "3D" not in str(type(ax)):
         # if 2d do this stuff
         leg = ax.legend(loc=(0,1.04), facecolor='none')
         plt.grid(color='green', alpha=0.5)
