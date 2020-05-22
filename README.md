@@ -38,7 +38,9 @@ python3 run3d.py
     - x = f(y,z), x = f(y), x = f(z)
     - z = f(x,y), z = f(x), z = f(y)
  - User inputted lims (2d only supported thus far)
+ - Can input multiple functions at a time
  - batman function 
+
  ```bash
 batman
 ```
@@ -47,6 +49,7 @@ batman
 - Some features break after one false input
 
 ## Examples
+#### 1) Simple Triginometry Example
 In terminal/cmd prompt:
 ```bash
 python3 run3d.py
@@ -58,6 +61,7 @@ output:
 
 ![screenshot](Images/screenshot.png)
 
+#### 2) Batman Function
 In terminal/cmd prompt:
 ```bash
 python3 run3d.py
@@ -68,3 +72,13 @@ batman
 output:
 
 ![screenshot](Images/batman.png)
+#### 1) Multiple Functions with set ranges (Box)
+In terminal/cmd prompt:
+```bash
+python3 run3d.py
+```
+```bash
+y=1 /#-1<x<1, y=-1 /#-1<x<1, x=1 /#-1<y<1, x=-1 /#-1<y<1
+```
+
+![screenshot](Images/box.png)
