@@ -2,8 +2,6 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from numpy import *
 
-from numpy import *
-
 def help_info():
     string = """
 Function_Plotter 3D
@@ -97,10 +95,7 @@ def run():
 
     fig = plt.figure('Function_Plotter')
     ax = fig.add_subplot(111, projection='3d')
-    plt.title('$'+func_string_raw+'$')
-    ax.set_xlabel('$x$')
-    ax.set_ylabel('$y$')
-    ax.set_zlabel('$z$')
+    title_obj = plt.title('$'+func_string_raw+'$')
 
     if 'x' not in func_string_raw:
             xlist = list(zeros(len(xlist)))
@@ -111,7 +106,11 @@ def run():
     if 'z' not in func_string_raw:
             zlist = list(zeros(len(zlist)))
 
-    ax.plot(xlist,ylist,zlist)
+    ax.plot(xlist,ylist,zlist,label='$'+func_string_raw+'$',c='r')
+
+    from MPLP import MPL_Prefs
+    MPL_Prefs(fig,ax,title_obj,'grid')
+
     plt.show()
 
 run()

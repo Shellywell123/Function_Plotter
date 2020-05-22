@@ -19,6 +19,7 @@ help: opens this page
 
     print (string)
 
+
 def run():
     """
     """
@@ -112,12 +113,18 @@ def run():
                 print('invalid input, type "help" or retry:')
                 run()
 
-    plt.figure('Function_Plotter')
-    plt.title('$'+func_string_raw+'$')
-    plt.xlabel('$x$')
-    plt.ylabel('$y$')
-    plt.plot(xlist,ylist)
-    plt.grid()
+    fig=plt.figure('Function_Plotter')
+    
+    ax = fig.add_subplot(111)
+
+    title_obj = plt.title('$'+func_string_raw+'$')
+
+    plt.plot(xlist,ylist,label='$'+func_string_raw+'$',c='r')
+
+
+    from MPLP import MPL_Prefs
+    MPL_Prefs(fig,ax,title_obj,'grid')
+
     plt.show()
 
 run()
