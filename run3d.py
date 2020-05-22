@@ -6,7 +6,7 @@ from numpy import *
 
 def help_info():
     string = """
-Funciton_Plotter 3D
+Function_Plotter 3D
 -------------------
 
 input function in forms,
