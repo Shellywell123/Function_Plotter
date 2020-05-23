@@ -31,8 +31,7 @@ def run():
     #deafult form y=..
     fvar = 'y'
     func_string_multi = input('input your function:\n')
-
-    
+   
     xfunc_lims = (-25,25)
     yfunc_lims = (-25,25)
 
@@ -95,6 +94,8 @@ def run():
         if ('y =' in func_string_raw) or ('y=' in func_string_raw):
             fvar = 'y'
             func_string = func_string_raw.split('=')[1]
+            if 'i' in func_string:
+                func_string = func_string.replace('i','1j')
             xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
             ylist = []
 
@@ -111,6 +112,9 @@ def run():
         if ('x =' in func_string_raw) or ('x=' in func_string_raw):
             fvar = 'x'
             func_string = func_string_raw.split('=')[1]
+            if 'i' in func_string:
+                func_string = func_string.replace('i','1j')
+            
             ylist = linspace(yfunc_lims[0],yfunc_lims[1],1000)
             xlist = []
 

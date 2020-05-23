@@ -42,6 +42,7 @@ python3 run3d.py
  - Batman function 
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
+ - Complex form (3D Coming Soon)
 
 ## Fixes to be made
 - Some features break after one false input
@@ -91,3 +92,14 @@ y=z,y=-z,y=x,y=-x,z=x,z=-x
 ```
 
 ![screenshot](Images/spike.png)
+#### 4) Complex Example
+In terminal/cmd prompt:
+```bash
+python3 run2d.py
+```
+```bash
+y=x, y=(i**2)*x
+```
+output:
+
+![screenshot](Images/comp2d.png)
