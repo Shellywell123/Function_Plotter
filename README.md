@@ -39,7 +39,9 @@ python3 run3d.py
     - z = f(x,y), z = f(x), z = f(y)
  - User inputted lims (2d only supported thus far)
  - Can input multiple functions at a time
- - batman function 
+ - Batman function 
+ - Parametric equations (Coming Soon)
+ - planes and vectors   (Coming Soon)
 
  ```bash
 batman
