@@ -72,7 +72,7 @@ batman
 output:
 
 ![screenshot](Images/batman.png)
-#### 1) Multiple Functions with set ranges (Box)
+#### 3) Multiple Functions with set ranges in 2D (Box)
 In terminal/cmd prompt:
 ```bash
 python3 run3d.py
@@ -82,3 +82,14 @@ y=1 /#-1<x<1, y=-1 /#-1<x<1, x=1 /#-1<y<1, x=-1 /#-1<y<1
 ```
 
 ![screenshot](Images/box.png)
+
+#### 4) Multiple Functions in 3D
+In terminal/cmd prompt:
+```bash
+python3 run3d.py
+```
+```bash
+y=z,y=-z,y=x,y=-x,z=x,z=-x
+```
+
+![screenshot](Images/spike.png)
