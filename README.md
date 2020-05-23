@@ -78,7 +78,7 @@ In terminal/cmd prompt:
 python3 run3d.py
 ```
 ```bash
-y=1 /#-1<x<1, y=-1 /#-1<x<1, x=1 /#-1<y<1, x=-1 /#-1<y<1
+y=1 #-1<x<1, y=-1 #-1<x<1, x=1 #-1<y<1, x=-1 #-1<y<1
 ```
 
 ![screenshot](Images/box.png)
