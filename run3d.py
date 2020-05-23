@@ -22,9 +22,21 @@ help: opens this page
 def run():
     """
     """
+    
+    func_string_multi = input('input your function:\n')
+    
+    if func_string_multi =='batman':
+            import batman 
+            
+    if func_string_multi == 'exit':
+        exit(0)
+        
+    if func_string_multi == 'help':
+        help_info()
+
+
     fig = plt.figure('Function_Plotter')
     ax = fig.add_subplot(111, projection='3d')
-    func_string_multi = input('input your function:\n')
 
     colours = ['red','yellow','white','blue','cyan','pink','purple']
 
@@ -35,15 +47,6 @@ def run():
         xfunc_lims = (-100,100)
         yfunc_lims = (-100,100)
         zfunc_lims = (-100,100)
-
-        if func_string_raw =='batman':
-            import batman 
-            
-        if func_string_raw == 'exit':
-            exit(0)
-            
-        if func_string_raw == 'help':
-            help_info()
 
         if '=' not in func_string_raw:
             print( 'function requires "=", e.g "y=mx+c"')
