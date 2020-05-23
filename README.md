@@ -33,6 +33,7 @@ python3 run3d.py
 ## Features
  - Supports 2D and 3D functions
  - Supports trigonometry functions
+ - Supports imaginary equations
  - Supports multiple input forms:
     - y = f(x,z), y = f(x), y = f(z)
     - x = f(y,z), x = f(y), x = f(z)
@@ -42,7 +43,7 @@ python3 run3d.py
  - Batman function 
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
- - Complex form (3D Coming Soon)
+ 
 
 ## Fixes to be made
 - Some features break after one false input
