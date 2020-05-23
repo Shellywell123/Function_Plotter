@@ -75,7 +75,7 @@ output:
 #### 3) Multiple Functions with set ranges in 2D (Box)
 In terminal/cmd prompt:
 ```bash
-python3 run3d.py
+python3 run2d.py
 ```
 ```bash
 y=1 #-1<x<1, y=-1 #-1<x<1, x=1 #-1<y<1, x=-1 #-1<y<1
