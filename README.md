@@ -1,5 +1,5 @@
 # Function Plotter
-Program for plotting 2D & 3D functions from direct input, written in Python3 for linux terminal
+Program for plotting 2D & 3D functions from direct input, written in Python 3 for Linux terminal
 Uses matplotlib and numpy libraries.
 
 ## Instructions:
@@ -41,11 +41,7 @@ python3 run3d.py
  - Can input multiple functions at a time
  - Batman function 
  - Parametric equations (Coming Soon)
- - planes and vectors   (Coming Soon)
-
- ```bash
-batman
-```
+ - Planes and vectors   (Coming Soon)
 
 ## Fixes to be made
 - Some features break after one false input
