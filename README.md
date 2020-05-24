@@ -40,7 +40,10 @@ python3 run3d.py
     - z = f(x,y), z = f(x), z = f(y)
  - User inputted lims (2d only supported thus far)
  - Can input multiple functions at a time
- - Batman function 
+ - Library of functions that can be added called and added to 
+ - Library's current contents:
+    - Letters: B,E
+    - Logos:   Batman
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
  
