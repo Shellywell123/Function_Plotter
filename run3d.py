@@ -41,7 +41,10 @@ def run():
 
     if func_string_multi == 'batman':
             colours = ['yellow','yellow','yellow','yellow']
-            
+
+    if func_string_multi == 'heart':
+            colours = ['red','red']
+
     if func_string_multi in library_contents:
         func_string_multi = eval(func_string_multi)
 

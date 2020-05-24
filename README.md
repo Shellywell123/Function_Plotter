@@ -43,7 +43,7 @@ python3 run3d.py
  - Library of functions that can be added called and added to 
  - Library's current contents:
     - Letters: B,E
-    - Logos:   Batman
+    - Logos:   batman, heart
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
  
