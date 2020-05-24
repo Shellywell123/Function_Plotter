@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from numpy import *
+from library import *
 
 def help_info():
     string = """
@@ -35,10 +36,18 @@ def run():
     xfunc_lims = (-25,25)
     yfunc_lims = (-25,25)
 
+    
 
-    colours = ['red','yellow','white','blue','cyan','pink','purple']
+    colours = ['red','yellow','white','blue','cyan','pink','purple','red','yellow','white','blue','cyan','pink','purple','red','yellow','white','blue','cyan','pink','purple']
+    
+    if func_string_multi == 'batman':
+            colours = ['yellow','yellow','yellow','yellow']
+
+    if func_string_multi in library_contents:
+        func_string_multi = eval(func_string_multi)
 
     for func_string_raw in func_string_multi.split(','):
+        
         color = colours[func_string_multi.split(',').index(func_string_raw)]
 
         if '#' in func_string_multi:
