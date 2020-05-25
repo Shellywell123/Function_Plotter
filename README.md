@@ -46,6 +46,7 @@ python3 run3d.py
     - Logos:   batman, heart
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
+ - Polar, Cylindrical, Spherical and Toroidal (Coming Soon)
  
 
 ## Fixes to be made
