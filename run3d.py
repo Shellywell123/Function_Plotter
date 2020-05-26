@@ -138,5 +138,5 @@ def run():
     MPL_Prefs(fig,ax,'','grid')
 
     plt.show()
-
+    run()
 run()
