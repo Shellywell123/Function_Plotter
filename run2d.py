@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from numpy import *
+from MPLP import *
 from library import *
 
 def help_info():
@@ -25,7 +26,7 @@ def run():
     """
     """
     
-    fig=plt.figure('Function_Plotter')
+    fig=plt.figure('Function_Plotter',figsize=[7,5])
         
     ax = fig.add_subplot(111)
 
@@ -142,11 +143,12 @@ def run():
                     run()
 
        # title_obj = plt.title('$'+func_string_raw+'$')
+    
+        legend_label = legend_labeller(func_string_raw)
+        plt.plot(xlist,ylist,label=legend_label,c=color)
 
-        plt.plot(xlist,ylist,label='$'+func_string_raw+'$',c=color)
 
-
-    from MPLP import MPL_Prefs
+    
     MPL_Prefs(fig,ax,'','grid')
 
     plt.show()

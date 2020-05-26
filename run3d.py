@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from numpy import *
+from MPLP import *
 from library import *
 
 def help_info():
@@ -34,7 +35,7 @@ def run():
         help_info()
 
 
-    fig = plt.figure('Function_Plotter')
+    fig = plt.figure('Function_Plotter',figsize=[7,5])
     ax = fig.add_subplot(111, projection='3d')
 
     colours = ['red','yellow','white','blue','cyan','pink','purple','red','yellow','white','blue','cyan','pink','purple','red','yellow','white','blue','cyan','pink','purple']
@@ -133,9 +134,10 @@ def run():
         if 'z' not in func_string_raw:
                 zlist = list(zeros(len(zlist)))
 
-        ax.plot(xlist,ylist,zlist,label='$'+func_string_raw+'$',c=color)
+        legend_label = legend_labeller(func_string_raw)
+        ax.plot(xlist,ylist,zlist,label=legend_label,c=color)
 
-    from MPLP import MPL_Prefs
+    
     MPL_Prefs(fig,ax,'','grid')
 
     plt.show()
