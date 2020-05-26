@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 from numpy import *
-from MPLP import *
+from theme.colours import *
+from theme.MPLP import *
 from library import *
 
 def help_info():
@@ -34,7 +35,8 @@ def run():
 
     #deafult form y=..
     fvar = 'y'
-    func_string_multi = input('input your function:\n')
+    func_string_multi = input(green+'input your function:\n'+red)
+    print(green)
    
     xfunc_lims = (-25,25)
     yfunc_lims = (-25,25)
@@ -51,7 +53,9 @@ def run():
 
 
     if func_string_multi in library_contents:
+        name = func_string_multi
         func_string_multi = eval(func_string_multi)
+        print("Plotting '{}' from library...".format(name))
 
     for func_string_raw in func_string_multi.split(','):
         

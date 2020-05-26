@@ -1,7 +1,8 @@
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from numpy import *
-from MPLP import *
+from theme.colours import *
+from theme.MPLP import *
 from library import *
 
 def help_info():
@@ -25,7 +26,8 @@ def run():
     """
     """
     
-    func_string_multi = input('input your function:\n')
+    func_string_multi = input(output_colour+'input your function:\n'+input_colour)
+    print(output_colour)
     
             
     if func_string_multi == 'exit':
