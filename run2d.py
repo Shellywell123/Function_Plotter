@@ -35,8 +35,8 @@ def run():
 
     #deafult form y=..
     fvar = 'y'
-    func_string_multi = input(green+'input your function:\n'+red)
-    print(green)
+    func_string_multi = input(output_colour+'input your function:\n'+input_colour)
+    print(output_colour)
    
     xfunc_lims = (-25,25)
     yfunc_lims = (-25,25)
@@ -63,6 +63,7 @@ def run():
 
         if '#' in func_string_multi:
             limits = func_string_raw.split('#')[1:]  
+
             #print (limits)
             for lim in limits:
               #  print(lim.split('<'))
@@ -77,11 +78,19 @@ def run():
 
                 if '<' in lim:
                     lo,var,up = lim.split('<')
+
+                    if lo == 'pi':
+                        lo =pi
+                    if up =='pi':
+                        up=pi
                     
 
                 if '>' in lim:
                     up,var,lo= lim.split('>')
-                   # print(a)
+                    if lo == 'pi':
+                        lo =pi
+                    if up =='pi':
+                        up=pi
 
                 if var == 'x':
                     #print ('xhigh ={}, xlow={}'.format(up,lo))

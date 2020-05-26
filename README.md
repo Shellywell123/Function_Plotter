@@ -33,7 +33,10 @@ python3 run3d.py
 ## Features
  - Supports 2D and 3D functions
  - Supports trigonometry functions
- - Supports imaginary equations
+ - Supports many mathematical constants:
+    - pi
+    - e
+    - i
  - Supports multiple input forms:
     - y = f(x,z), y = f(x), y = f(z)
     - x = f(y,z), x = f(y), x = f(z)

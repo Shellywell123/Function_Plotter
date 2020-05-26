@@ -41,27 +41,46 @@ library_contents = letters + logos
 def alias_check(func_string):
     """allows user to put alias command, can defo smarten"""
 
+    #################################
     mult_checks = [')(',
                     '0(','1(','2(','3(','4(','5(','6(','7(','8(','9(',
                     ')0',')1',')2',')3',')4',')5',')6',')7',')8',')9',
-                    ')a',')c',')s',
-                    '0a','1a','2a','3a','4a','5a','6a','7a','8a','9a'
-                    '0c','1c','2c','3c','4c','5c','6c','7c','8c','9c',
-                    '0e','1e','2e','3e','4e','5e','6e','7e','8e','9e',
-                    '0i','1i','2i','3i','4i','5i','6i','7i','8i','9i',
-                    '0s','1s','2s','3s','4s','5s','6s','7s','8s','9s',
-                    '0x','1x','2x','3x','4x','5x','6x','7x','8x','9x',
-                    '0y','1y','2y','3y','4y','5y','6y','7y','8y','9y',
-                    '0z','1z','2z','3z','4z','5z','6z','7z','8z','9z']
+                    ')a',')c',')s']
+
+    import string
+    for letter in list(string.ascii_lowercase):
+        mult_checks.append('0'+letter)
+        mult_checks.append('1'+letter)
+        mult_checks.append('2'+letter)
+        mult_checks.append('3'+letter)
+        mult_checks.append('4'+letter)
+        mult_checks.append('5'+letter)
+        mult_checks.append('6'+letter)
+        mult_checks.append('7'+letter)
+        mult_checks.append('8'+letter)
+        mult_checks.append('9'+letter)
+
+
     for check in mult_checks:
         if check in func_string:
             func_string = func_string.replace(check,check[0]+'*'+check[1])
 
+    #################################
+    neg_checks = []
+    for letter in list(string.ascii_lowercase):
+        neg_checks.append('-'+letter)
+
+    for check in neg_checks:
+        if check in func_string:
+            func_string = func_string.replace(check,check[0]+'-1*'+check[1])
+
+    #################################
     power_checks = ['^']
     for check in power_checks:
         if check in func_string:
             func_string = func_string.replace(check,'**')
 
+    #################################
     comp_checks = [' i','i ','+i','i+','*i','i*','/i','i/','-i','i-']
     for check in comp_checks:
         if check in func_string:
