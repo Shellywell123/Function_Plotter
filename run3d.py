@@ -65,8 +65,7 @@ def run():
         if ('y =' in func_string_raw) or ('y=' in func_string_raw):
                 fvar = 'y'
                 func_string = func_string_raw.split('=')[1]
-                if 'i' in func_string:
-                    func_string = func_string.replace('i','1j')
+                func_string = alias_check(func_string)
                 xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
                 zlist = linspace(zfunc_lims[0],zfunc_lims[1],1000)
                 ylist = []
@@ -85,8 +84,7 @@ def run():
         if ('x =' in func_string_raw) or ('x=' in func_string_raw):
             fvar = 'x'
             func_string = func_string_raw.split('=')[1]
-            if 'i' in func_string:
-                func_string = func_string.replace('i','1j')
+            func_string = alias_check(func_string)
             ylist = linspace(yfunc_lims[0],yfunc_lims[1],1000)
             zlist = linspace(zfunc_lims[0],zfunc_lims[1],1000)
             xlist = []
@@ -105,8 +103,7 @@ def run():
         if ('z =' in func_string_raw) or ('z=' in func_string_raw):
             fvar = 'z'
             func_string = func_string_raw.split('=')[1]
-            if 'i' in func_string:
-                func_string = func_string.replace('i','1j')
+            func_string = alias_check(func_string)
             ylist = linspace(yfunc_lims[0],yfunc_lims[1],1000)
             xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
             zlist = []

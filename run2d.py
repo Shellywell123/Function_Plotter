@@ -21,14 +21,16 @@ help: opens this page
 
     print (string)
 
-
 def run():
     """
     """
-    
+
+    #need to find alt way to set fig size
     fig=plt.figure('Function_Plotter',figsize=[7,5])
+    #fig.canvas.set_window_title('Function_Plotter')
         
     ax = fig.add_subplot(111)
+    
 
     #deafult form y=..
     fvar = 'y'
@@ -108,8 +110,7 @@ def run():
         if ('y =' in func_string_raw) or ('y=' in func_string_raw):
             fvar = 'y'
             func_string = func_string_raw.split('=')[1]
-            if 'i' in func_string:
-                func_string = func_string.replace('i','1j')
+            func_string = alias_check(func_string)
             xlist = linspace(xfunc_lims[0],xfunc_lims[1],1000)
             ylist = []
 
@@ -126,8 +127,7 @@ def run():
         if ('x =' in func_string_raw) or ('x=' in func_string_raw):
             fvar = 'x'
             func_string = func_string_raw.split('=')[1]
-            if 'i' in func_string:
-                func_string = func_string.replace('i','1j')
+            func_string = alias_check(func_string)
             
             ylist = linspace(yfunc_lims[0],yfunc_lims[1],1000)
             xlist = []
@@ -147,8 +147,6 @@ def run():
         legend_label = legend_labeller(func_string_raw)
         plt.plot(xlist,ylist,label=legend_label,c=color)
 
-
-    
     MPL_Prefs(fig,ax,'','grid')
 
     plt.show()

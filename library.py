@@ -1,5 +1,5 @@
 
-#LIBRARY OF FUNCTIONS
+#LIBRARY OF FUNCTIONS AND INPUT ALIAS
 
 #ALPHABET
 A = ""
@@ -37,3 +37,17 @@ heart  = "y = sqrt(1 -(abs(x)-1)**2) #-2<x<2, y=-3*sqrt(1-(sqrt(abs(x)/2))) #-2<
 logos = ['batman','heart']
 
 library_contents = letters + logos
+
+def alias_check(func_string):
+    """allows user to put i = -1"""
+    comp_checks = [' i','i ','+i','i+','*i','i*','/i','i/','-i','i-']
+    for check in comp_checks:
+        if check in func_string:
+            func_string = func_string.replace(check,'1j')
+
+    power_checks = ['^']
+    for check in power_checks:
+        if check in func_string:
+            func_string = func_string.replace(check,'**')
+
+    return func_string

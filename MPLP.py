@@ -10,7 +10,7 @@ def MPL_Prefs(fig,ax,title_obj,grid):
     if "3D" in str(type(ax)):
         #if 3d do this stuff also (zaxis operations)
         leg = ax.legend(loc=(1.05,0.25), facecolor='none', prop={'size': 10}, handlelength=0.5)
-        fig.subplots_adjust(left=0, right=0.5, bottom=0, top=1)
+        fig.subplots_adjust(left=0, right=0.75, bottom=0, top=1)
 
         ax.w_xaxis.set_pane_color((0.0, 0.0, 0.0, 0.0))
         ax.w_yaxis.set_pane_color((0.0, 0.0, 0.0, 0.0))
