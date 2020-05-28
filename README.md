@@ -60,8 +60,7 @@ foo@bar:~$ python3 run3d.py
 In terminal/cmd prompt:
 ```bash
 foo@bar:~$ python3 run3d.py
-```
-```bash
+input your function:
 >> z = x*sin(y)**2
 ```
 output:
@@ -72,8 +71,7 @@ output:
 In terminal/cmd prompt:
 ```bash
 foo@bar:~$ python3 run3d.py
-```
-```bash
+input your function:
 >> batman
 ```
 output:
@@ -83,8 +81,7 @@ output:
 In terminal/cmd prompt:
 ```bash
 foo@bar:~$ python3 run2d.py
-```
-```bash
+input your function:
 >> y=1 #-1<x<1, y=-1 #-1<x<1, x=1 #-1<y<1, x=-1 #-1<y<1
 ```
 
@@ -94,8 +91,7 @@ foo@bar:~$ python3 run2d.py
 In terminal/cmd prompt:
 ```bash
 foo@bar:~$ python3 run3d.py
-```
-```bash
+input your function:
 >> y=z,y=-z,y=x,y=-x,z=x,z=-x
 ```
 
@@ -104,8 +100,7 @@ foo@bar:~$ python3 run3d.py
 In terminal/cmd prompt:
 ```bash
 foo@bar:~$ python3 run2d.py
-```
-```bash
+input your function:
 >> y=x, y=(i**2)*x
 ```
 output:
