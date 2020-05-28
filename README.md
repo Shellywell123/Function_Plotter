@@ -17,7 +17,7 @@ foo@bar:~$ cd Function_Plotter/
 ```
 In terminal/cmd prompt, pull the latest version:
 ```bash
-git pull
+foo@bar:~$ git pull
 ```
 
 ### How to run:
