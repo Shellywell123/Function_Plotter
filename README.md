@@ -43,7 +43,7 @@ foo@bar:~$ python3 run3d.py
     - z = f(x,y), z = f(x), z = f(y)
  - User inputted funtion limits
  - Can input multiple functions at a time
- - Library of functions that can be added called and added to 
+ - Library of functions that can be added to and called with direct aliases: 
  - Library's current contents:
     - Letters: `B`, `E`, `L`, `N`
     - Logos:   `batman`, `heart`
