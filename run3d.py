@@ -30,7 +30,7 @@ def run():
     print(output_colour)
 
     #default lims, if no lims set by user
-    xfunclims  = (-25,25)
+    xfunc_lims = (-25,25)
     yfunc_lims = (-25,25)
     zfunc_lims = (-25,25)    
             
