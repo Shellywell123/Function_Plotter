@@ -5,7 +5,7 @@ from theme.colours import *
 from theme.MPLP import *
 from library import *
 
-def help_info():
+def help_info3d():
     string = """
 Function_Plotter 3D
 -------------------
@@ -42,7 +42,7 @@ def run3d():
         exit(0)
         
     if func_string_multi == 'help':
-        help_info()
+        help_info3d()
 
     if func_string_multi == 'lib':
         print('Functions in library:\n',library_contents)
@@ -71,7 +71,7 @@ def run3d():
     for func_string_raw in func_string_multi.split(','):
         color = colours[func_string_multi.split(',').index(func_string_raw)]
 
-
+        # hastags denote limits in user inputs
         if '#' in func_string_multi:
             limits = func_string_raw.split('#')[1:]  
 
@@ -197,8 +197,9 @@ def run3d():
         ax.plot(xlist,ylist,zlist,label=legend_label,c=color)
 
     
+    #after all eqs are plotted apply matplotlib preferences and show figure
     MPL_Prefs(fig,ax,'','grid')
-
     plt.show()
     run3d()
+
 run3d()

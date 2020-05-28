@@ -4,7 +4,7 @@ from theme.colours import *
 from theme.MPLP import *
 from library import *
 
-def help_info():
+def help_info2d():
     string = """
 Function_Plotter 2D
 -------------------
@@ -39,16 +39,18 @@ def run2d():
         exit(0)
         
     if func_string_multi == 'help':
-        help_info()
+        help_info2d()
 
     if func_string_multi == 'lib':
         print('Functions in library:\n',library_contents)
         run2d()
 
-        #need to find alt way to set fig size
+    if 'z' in func_string_multi:
+        print ('2D is only in x & y, retry:')
+        run2d()
+
+    #set up figure and ax
     fig=plt.figure('Function_Plotter',figsize=[7,5])
-    #fig.canvas.set_window_title('Function_Plotter')
-        
     ax = fig.add_subplot(111)
    
     #default lims, if no lims set by user
@@ -74,10 +76,10 @@ def run2d():
     for func_string_raw in func_string_multi.split(','):
         color = colours[func_string_multi.split(',').index(func_string_raw)]
 
+        # hastags denote limits in user inputs
         if '#' in func_string_multi:
             limits = func_string_raw.split('#')[1:]  
 
-            #print (limits)
             for lim in limits:
               #  print(lim.split('<'))
 
@@ -111,18 +113,13 @@ def run2d():
 
                 if var == 'y':
                     yfunc_lims = (float(lo),float(up))
-        #         func_string = func_string_raw.split('=')[1]
+          #          func_string = func_string_raw.split('=')[1]
           #          x=float(up)
           #          upy = eval(func_string)
           #          x=float(lo)
           #          loy = eval(func_string)
           #          print ('yhigh ={}, ylow={}'.format(up,lo))
           #          yfunc_lims = (float(loy),float(upy))
-
-
-        if 'z' in func_string_raw:
-            print ('2D is only in x & y, retry:')
-            run2d()
 
         if '=' not in func_string_raw:
             print( 'function requires "=", e.g "y=mx+c"')
@@ -168,6 +165,7 @@ def run2d():
         legend_label = legend_labeller(func_string_raw)
         plt.plot(xlist,ylist,label=legend_label,c=color)
 
+    #after all eqs are plotted apply matplotlib preferences and show figure
     MPL_Prefs(fig,ax,'','grid')
     plt.show()
     run2d()
