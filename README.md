@@ -45,7 +45,7 @@ foo@bar:~$ python3 run3d.py
  - Can input multiple functions at a time
  - Library of functions that can be added to and called with direct aliases: 
  - Library's current contents:
-    - Letters: `B`, `E`, `L`, `N`
+    - Letters: `B`, `C`, `E`, `F`, `H`, `L`, `N`
     - Logos:   `batman`, `heart`
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
@@ -106,6 +106,12 @@ input your function:
 output:
 
 ![screenshot](Images/comp2d.png)
+
+
+
+
+
+
 
 
 
