@@ -38,10 +38,9 @@ def run():
     func_string_multi = input(output_colour+'input your function:\n'+input_colour)
     print(output_colour)
    
-    xfunc_lims = (-25,25)
+    #default lims, if no lims set by user
+    xfunclims  = (-25,25)
     yfunc_lims = (-25,25)
-
-    
 
     colours = ['red','yellow','white','blue','cyan','pink','purple','red','yellow','white','blue','cyan','pink','purple','red','yellow','white','blue','cyan','pink','purple']
     

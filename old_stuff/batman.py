@@ -45,10 +45,10 @@ fig = plt.figure('Batman_Plotter')
 ax = fig.add_subplot(111, projection='3d')
 title_obj = plt.title('$Batman$')
 ax.plot(x1list,y1list,z1list,label='$Batman$',c='yellow')
-ax.plot(x2list,y2list,z2list,c='yellow')
-ax.plot(x3list,y3list,z3list,c='yellow')
-ax.plot(x4list,y4list,z4list,c='yellow')
-from MPLP import MPL_Prefs
-MPL_Prefs(fig,ax,title_obj,'grid')
+#ax.plot(x2list,y2list,z2list,c='yellow')
+#ax.plot(x3list,y3list,z3list,c='yellow')
+#ax.plot(x4list,y4list,z4list,c='yellow')
+#from MPLP import MPL_Prefs
+#MPL_Prefs(fig,ax,title_obj,'grid')
 
 plt.show()

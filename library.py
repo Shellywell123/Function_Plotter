@@ -30,7 +30,6 @@ Z=""
 
 letters = ['B','E']
 
-#LOGOS
 batman="y=1.5sqrt((-abs(abs(x)-1))abs(3-abs(x))/((abs(x)-1)(3-abs(x))))(1+abs(abs(x)-3)/(abs(x)-3))sqrt(1-(x/7)^2)+(4.5+0.75(abs(x-0.5)+abs(x+0.5))-2.75(abs(x-0.75)+abs(x+0.75)))(1+abs(1-abs(x))/(1-abs(x))),y=(-3)sqrt(1-(x/7)^2)sqrt(abs(abs(x)-4)/(abs(x)-4)),y=abs(x/2)-0.0913722x^2-3+sqrt(1-(abs(abs(x)-2)-1)^2),y=(2.71052+1.5-0.5abs(x)-1.35526sqrt(4-(abs(x)-1)^2))sqrt(abs(abs(x)-1)/(abs(x)-1))"
 heart="y=sqrt(1-(abs(x)-1)^2)#-2<x<2,y=-3sqrt(1-(sqrt(abs(x)/2)))#-2<x<2"
 
@@ -59,20 +58,21 @@ def alias_check(func_string):
         mult_checks.append('7'+letter)
         mult_checks.append('8'+letter)
         mult_checks.append('9'+letter)
-
+        mult_checks.append(')'+letter)
 
     for check in mult_checks:
         if check in func_string:
             func_string = func_string.replace(check,check[0]+'*'+check[1])
 
     #################################
-    neg_checks = []
-    for letter in list(string.ascii_lowercase):
-        neg_checks.append('-'+letter)
+    # currently breaks batman funciton?
+   # neg_checks = []
+   # for letter in list(string.ascii_lowercase):
+   #     neg_checks.append('-'+letter)
 
-    for check in neg_checks:
-        if check in func_string:
-            func_string = func_string.replace(check,check[0]+'-1*'+check[1])
+  #  for check in neg_checks:
+  #      if check in func_string:
+  #          func_string = func_string.replace(check,check[0]+'-1*'+check[1])
 
     #################################
     power_checks = ['^']
@@ -85,9 +85,5 @@ def alias_check(func_string):
     for check in comp_checks:
         if check in func_string:
             func_string = func_string.replace(check,'1j')
-
-    
-
-
 
     return func_string

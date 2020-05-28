@@ -28,7 +28,11 @@ def run():
     
     func_string_multi = input(output_colour+'input your function:\n'+input_colour)
     print(output_colour)
-    
+
+    #default lims, if no lims set by user
+    xfunclims  = (-25,25)
+    yfunc_lims = (-25,25)
+    zfunc_lims = (-25,25)    
             
     if func_string_multi == 'exit':
         exit(0)
@@ -55,10 +59,54 @@ def run():
     for func_string_raw in func_string_multi.split(','):
         color = colours[func_string_multi.split(',').index(func_string_raw)]
 
-        #lims preset fo now
-        xfunc_lims = (-100,100)
-        yfunc_lims = (-100,100)
-        zfunc_lims = (-100,100)
+
+        if '#' in func_string_multi:
+            limits = func_string_raw.split('#')[1:]  
+
+            #print (limits)
+            for lim in limits:
+              #  print(lim.split('<'))
+
+              #  if (len(lim.split('<')) != 3) or (len(lim.split('>')) != 3):
+              #      print('invalid limits, retry:8')
+              #      run()
+
+                if ('<' in lim) and ( '>' in lim):
+                    print('invalid limits, retry:')
+                    run()
+
+                if '<' in lim:
+                    lo,var,up = lim.split('<')
+
+                    if lo == 'pi':
+                        lo =pi
+                    if up =='pi':
+                        up=pi
+                    
+
+                if '>' in lim:
+                    up,var,lo= lim.split('>')
+                    if lo == 'pi':
+                        lo =pi
+                    if up =='pi':
+                        up=pi
+
+                if var == 'x':
+                    #print ('xhigh ={}, xlow={}'.format(up,lo))
+                    xfunc_lims = (float(lo),float(up))
+
+                if var == 'y':
+                    yfunc_lims = (float(lo),float(up))
+        #         func_string = func_string_raw.split('=')[1]
+          #          x=float(up)
+          #          upy = eval(func_string)
+          #          x=float(lo)
+          #          loy = eval(func_string)
+          #          print ('yhigh ={}, ylow={}'.format(up,lo))
+          #          yfunc_lims = (float(loy),float(upy))
+
+                if var == 'z':
+                    zfunc_lims = (float(lo),float(up))
 
         if '=' not in func_string_raw:
             print( 'function requires "=", e.g "y=mx+c"')
