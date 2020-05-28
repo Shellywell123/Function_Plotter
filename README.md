@@ -7,13 +7,13 @@ Uses matplotlib and numpy libraries.
 ### How to setup:
 In terminal/cmd prompt, clone the repository into you desired location:
 ```bash
-git clone https://github.com/Shellywell123/Function_Plotter.git
+foo@bar:~$ git clone https://github.com/Shellywell123/Function_Plotter.git
 ```
 
 ### How to update:
 Navigate to program directory:
 ```bash
-cd Function_Plotter/
+foo@bar:~$ cd Function_Plotter/
 ```
 In terminal/cmd prompt, pull the latest version:
 ```bash
@@ -23,11 +23,11 @@ git pull
 ### How to run:
 For 2D functions, in terminal/cmd prompt, execute 'run2d.py' with python 3:
 ```bash
-python3 run2d.py
+foo@bar:~$ python3 run2d.py
 ```
 For 3D functions, in terminal/cmd prompt, execute 'run3d.py' with python 3:
 ```bash
-python3 run3d.py
+foo@bar:~$ python3 run3d.py
 ```
 
 ## Features
@@ -59,10 +59,10 @@ python3 run3d.py
 #### 1) Simple Triginometry Example
 In terminal/cmd prompt:
 ```bash
-python3 run3d.py
+foo@bar:~$ python3 run3d.py
 ```
 ```bash
-z = x*sin(y)**2
+>> z = x*sin(y)**2
 ```
 output:
 
@@ -71,10 +71,10 @@ output:
 #### 2) Batman Function
 In terminal/cmd prompt:
 ```bash
-python3 run3d.py
+foo@bar:~$ python3 run3d.py
 ```
 ```bash
-batman
+>> batman
 ```
 output:
 
@@ -82,10 +82,10 @@ output:
 #### 3) Multiple Functions with set ranges in 2D (Box)
 In terminal/cmd prompt:
 ```bash
-python3 run2d.py
+foo@bar:~$ python3 run2d.py
 ```
 ```bash
-y=1 #-1<x<1, y=-1 #-1<x<1, x=1 #-1<y<1, x=-1 #-1<y<1
+>> y=1 #-1<x<1, y=-1 #-1<x<1, x=1 #-1<y<1, x=-1 #-1<y<1
 ```
 
 ![screenshot](Images/box.png)
@@ -93,20 +93,20 @@ y=1 #-1<x<1, y=-1 #-1<x<1, x=1 #-1<y<1, x=-1 #-1<y<1
 #### 4) Multiple Functions in 3D
 In terminal/cmd prompt:
 ```bash
-python3 run3d.py
+foo@bar:~$ python3 run3d.py
 ```
 ```bash
-y=z,y=-z,y=x,y=-x,z=x,z=-x
+>> y=z,y=-z,y=x,y=-x,z=x,z=-x
 ```
 
 ![screenshot](Images/spike.png)
 #### 4) Complex Example
 In terminal/cmd prompt:
 ```bash
-python3 run2d.py
+foo@bar:~$ python3 run2d.py
 ```
 ```bash
-y=x, y=(i**2)*x
+>> y=x, y=(i**2)*x
 ```
 output:
 
