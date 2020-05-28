@@ -41,7 +41,7 @@ foo@bar:~$ python3 run3d.py
     - y = f(x,z), y = f(x), y = f(z)
     - x = f(y,z), x = f(y), x = f(z)
     - z = f(x,y), z = f(x), z = f(y)
- - User inputted lims (2d only supported thus far)
+ - User inputted funtion limits
  - Can input multiple functions at a time
  - Library of functions that can be added called and added to 
  - Library's current contents:
