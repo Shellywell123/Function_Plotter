@@ -45,8 +45,8 @@ foo@bar:~$ python3 run3d.py
  - Can input multiple functions at a time
  - Library of functions that can be added called and added to 
  - Library's current contents:
-    - Letters: B,E
-    - Logos:   batman, heart
+    - Letters: `B`, `E`, `N`
+    - Logos:   `batman`, `heart`
  - Parametric equations (Coming Soon)
  - Planes and vectors   (Coming Soon)
  - Polar, Cylindrical, Spherical and Toroidal (Coming Soon)

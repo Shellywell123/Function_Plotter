@@ -35,6 +35,34 @@ heart="y=sqrt(1-(abs(x)-1)^2)#-2<x<2,y=-3sqrt(1-(sqrt(abs(x)/2)))#-2<x<2"
 
 logos = ['batman','heart']
 
+
+def md_lib_updater(letters,logos):
+    """ auto update for markdown"""
+    letterstr = '`' + "`, `".join(letters) + '`'
+    logostr   = '`' + "`, `".join(logos) + '`'
+
+    file = 'README.md'
+
+    with open(file, 'r') as f:
+       cont = f.read()
+      # print(cont)
+
+    newcont = ''
+    for line in cont.split('\n'):
+        if "    - Letters: " in line:
+            print ('let')
+            line =  "    - Letters: {}".format(letterstr)
+        if "    - Logos:   " in line:
+            print('log')
+            line = "    - Logos:   {}".format(logostr)
+        print(line)
+        newcont = newcont+line+'\n'
+
+    with open(file, 'w') as f:
+        f.write(newcont)
+
+md_lib_updater(letters,logos)
+
 library_contents = letters + logos
 
 def alias_check(func_string):
