@@ -32,7 +32,14 @@ foo@bar:~$ python3 run3d.py
 
 ## Features
  - Supports 2D and 3D functions
- - Supports trigonometry functions
+ - Supports many mathematical functions:
+    - sin, cos, tan, arcsin, arccos, arctan
+    - sinh, cosh, tanh, arcsinh, arccosh, archtanh
+    - log
+    - abs
+    - sqrt
+    - x^n
+    
  - Supports many mathematical constants:
     - pi
     - e
@@ -106,6 +113,11 @@ input your function:
 output:
 
 ![screenshot](Images/comp2d.png)
+
+
+
+
+
 
 
 
