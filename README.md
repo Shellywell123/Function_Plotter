@@ -51,13 +51,15 @@ foo@bar:~$ python3 run3d.py
  - User inputted funtion limits
     - e.g `y = 4x + 1 #0<x<4`
  - Can input multiple functions at a time
+    - e.g `y = 4x + 1, x = -y + 7`
  - Library of functions that can be added to and called with direct aliases: 
- - Library's current contents:
-    - Letters: `B`, `C`, `E`, `F`, `H`, `L`, `N`, `T`, `Z`
-    - Logos:   `batman`, `heart`
- - Parametric equations (Coming Soon)
- - Planes and vectors   (Coming Soon)
- - Polar, Cylindrical, Spherical and Toroidal (Coming Soon)
+    - Library's current contents:
+        - Letters: `B`, `C`, `E`, `F`, `H`, `L`, `N`, `T`, `Z`
+        - Logos:   `batman`, `heart`
+ - Coming Soon
+    - Parametric equations
+    - Planes and vectors  
+    - Polar, Cylindrical, Spherical and Toroidal
  
 
 ## Fixes to be made
