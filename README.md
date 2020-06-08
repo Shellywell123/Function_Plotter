@@ -33,22 +33,23 @@ foo@bar:~$ python3 run3d.py
 ## Features
  - Supports 2D and 3D functions
  - Supports many mathematical functions:
-    - sin, cos, tan, arcsin, arccos, arctan
-    - sinh, cosh, tanh, arcsinh, arccosh, arctanh
-    - log, log10_
-    - abs
-    - sqrt
-    - x^n,x**n
+    - `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`
+    - `sinh`, `cosh`, `tanh`, `arcsinh`, `arccosh`, `arctanh`
+    - `log`, `log10_`
+    - `abs`
+    - `sqrt`
+    - `x^n`, `x**n`
     
  - Supports many mathematical constants:
-    - pi
-    - e
-    - i
+    - `pi`
+    - `e`
+    - `i`
  - Supports multiple input forms:
-    - y = f(x,z), y = f(x), y = f(z)
-    - x = f(y,z), x = f(y), x = f(z)
-    - z = f(x,y), z = f(x), z = f(y)
+    - `y = f(x,z)`, `y = f(x)`, `y = f(z)`
+    - `x = f(y,z)`, `x = f(y)`, `x = f(z)`
+    - `z = f(x,y)`, `z = f(x)`, `z = f(y)`
  - User inputted funtion limits
+    - e.g `y = 4x + 1 #0<x<4`
  - Can input multiple functions at a time
  - Library of functions that can be added to and called with direct aliases: 
  - Library's current contents:
