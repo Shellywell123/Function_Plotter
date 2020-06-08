@@ -38,7 +38,7 @@ foo@bar:~$ python3 run3d.py
     - log, log10_
     - abs
     - sqrt
-    - x^n
+    - x^n,x**n
     
  - Supports many mathematical constants:
     - pi
