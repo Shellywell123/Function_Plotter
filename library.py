@@ -70,6 +70,7 @@ library_contents = letters + logos
 def alias_check(func_string):
     """allows user to put alias command, can defo smarten"""
 
+
     #################################
     mult_checks = [')(',
                     '0(','1(','2(','3(','4(','5(','6(','7(','8(','9(',
@@ -103,6 +104,11 @@ def alias_check(func_string):
   #  for check in neg_checks:
   #      if check in func_string:
   #          func_string = func_string.replace(check,check[0]+'-1*'+check[1])
+
+    log10_checks=['log10_']
+    for check in log10_checks:
+        if check in func_string:
+            func_string = func_string.replace(check,'log10')
 
     #################################
     power_checks = ['^']

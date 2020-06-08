@@ -35,7 +35,7 @@ foo@bar:~$ python3 run3d.py
  - Supports many mathematical functions:
     - sin, cos, tan, arcsin, arccos, arctan
     - sinh, cosh, tanh, arcsinh, arccosh, archtanh
-    - log
+    - log, log10_
     - abs
     - sqrt
     - x^n
@@ -113,6 +113,14 @@ input your function:
 output:
 
 ![screenshot](Images/comp2d.png)
+
+
+
+
+
+
+
+
 
 
 
