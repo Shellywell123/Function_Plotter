@@ -56,6 +56,7 @@ foo@bar:~$ python3 run3d.py
     - Library's current contents:
         - Letters: `B`, `C`, `E`, `F`, `H`, `L`, `N`, `T`, `Z`
         - Logos:   `batman`, `heart`
+    - See examples below to see how they can be called
  - Coming Soon
     - Parametric equations
     - Planes and vectors  
@@ -78,7 +79,7 @@ output:
 
 ![screenshot](Images/screenshot.png)
 
-#### 2) Batman Function
+#### 2) Batman Function (alias funtions)
 In terminal/cmd prompt:
 ```bash
 foo@bar:~$ python3 run3d.py
