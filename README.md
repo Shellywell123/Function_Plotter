@@ -34,7 +34,7 @@ foo@bar:~$ python3 run3d.py
  - Supports 2D and 3D functions
  - Supports many mathematical functions:
     - sin, cos, tan, arcsin, arccos, arctan
-    - sinh, cosh, tanh, arcsinh, arccosh, archtanh
+    - sinh, cosh, tanh, arcsinh, arccosh, arctanh
     - log, log10_
     - abs
     - sqrt
