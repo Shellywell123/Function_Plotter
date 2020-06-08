@@ -53,10 +53,10 @@ def md_lib_updater(letters,logos):
 
     newcont = ''
     for line in cont.split('\n'):
-        if "    - Letters: " in line:
-            line =  "    - Letters: {}".format(letterstr)
-        if "    - Logos:   " in line:
-            line = "    - Logos:   {}".format(logostr)
+        if "        - Letters: " in line:
+            line =  "        - Letters: {}".format(letterstr)
+        if "        - Logos:   " in line:
+            line = "        - Logos:   {}".format(logostr)
        # print(line)
         newcont = newcont+line+'\n'
 
