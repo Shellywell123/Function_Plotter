@@ -29,6 +29,7 @@ def run3d():
     """
     
     #ask for user input
+    set_tab_complete_options(library_contents)
     func_string_multi = input(output_colour+'input your function:\n'+input_colour)
     print(output_colour)
 

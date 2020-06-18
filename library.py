@@ -1,4 +1,4 @@
-
+import readline
 #LIBRARY OF FUNCTIONS AND INPUT ALIAS
 
 #ALPHABET
@@ -66,6 +66,27 @@ def md_lib_updater(letters,logos):
 md_lib_updater(letters,logos)
 
 library_contents = letters + logos
+
+#############################################################
+
+def set_tab_complete_options(options):
+    """
+    allows user to tab complete inputs
+    """
+
+    readline.parse_and_bind("tab: complete")
+
+    def complete(text,state):
+        if text:
+            results = [s for s in options if s and s.startswith(text)]
+        else: 
+            results = results[:]
+
+        return results[state]
+
+    readline.set_completer(complete)
+
+#############################################################
 
 def alias_check(func_string):
     """allows user to put alias command, can defo smarten"""
