@@ -67,6 +67,8 @@ md_lib_updater(letters,logos)
 
 library_contents = letters + logos
 
+norm_func_tab_list = ['sin(','cos(','tan(','sqrt(','log(','log10(','arctan(','arccos(','arcsin(','abs(']
+
 #############################################################
 
 def set_tab_complete_options(options):

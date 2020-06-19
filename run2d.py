@@ -31,7 +31,7 @@ def run2d():
 
     #deafult form y=..
     fvar = 'y'
-    set_tab_complete_options(library_contents)
+    set_tab_complete_options(library_contents+norm_func_tab_list)
     func_string_multi = input(output_colour+'input your function:\n'+input_colour)
     print(output_colour)
 
