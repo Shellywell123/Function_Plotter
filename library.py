@@ -65,7 +65,7 @@ def md_lib_updater(letters,logos):
 
 md_lib_updater(letters,logos)
 
-library_contents = letters + logos
+library_contents = letters + logos2
 
 norm_func_tab_list = ['sin(','cos(','tan(','sqrt(','log(','log10(','arctan(','arccos(','arcsin(','abs(']
 
